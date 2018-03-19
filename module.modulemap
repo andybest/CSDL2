@@ -1,5 +1,23 @@
 module CSDL2 [system] {
-    header "shim.h"
+    header "shim_SDL2.h"
     link "SDL2"
     export *
+
+    module gfx {
+        header "shim_SDL2_gfx.h"
+        link "SDL2_gfx"
+        export *
+    }
+
+    module image {
+        header "shim_SDL2_image.h"
+        link "SDL2_image"
+        export *
+    }
+
+    module ttf {
+        header "shim_SDL2_gfx.h"
+        link "SDL2_ttf"
+        export *
+    }
 }
